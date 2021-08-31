@@ -1,0 +1,443 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 2900px;
+}
+.nb{
+    background-color: tomato;
+    color: white;
+}
+.nb ul{
+    display: flex;
+    padding: 10px 10px;
+    flex-direction: row-reverse;
+}
+.nb li{
+    text-decoration: none;
+    list-style: none;
+    margin: 5px 10px;
+}
+.nb a{
+    /* display: flex; */
+    /* position: absolute; */
+    /* top: 30px; */
+    /* left: 29px; */
+    color: white;
+    text-decoration: none;
+}
+.nb a:hover{
+    color: rgb(250, 210, 99)
+}
+.srch{
+    /* display: flex; */
+    position: absolute;
+    top: 30px;
+    margin: 0px 20px;
+}
+.srch input[type=text]{
+    background-color: tomato;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+}
+#title{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    align-items: center;
+    color: #790b0a;
+   
+}
+#logo{
+    width: 150px;
+}
+#title p{
+    position: relative;
+    top: -50px;
+    font-family: 'Faster One', cursive;
+    font-size: 25px;
+}
+.menu{grid-area: menu;}
+.main{grid-area: main;}
+.footer{grid-area: footer;}
+.menu{
+    width: 300px;
+}
+.gridcnt{
+    display: grid;
+    position: relative;
+    bottom: 55px;
+    grid-template-areas:
+        'menu main main main main main' 
+        'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    /* background-color: rgb(78, 4, 78); */
+    padding: 10px;
+}
+.gridcnt>div{
+    background-color: white;
+    text-align: center;
+    padding: 20px 0px;
+    
+}
+#catlist li{
+    padding: 50px;
+    /* border: 1px solid black; */
+    border-right: 1px solid black;
+    list-style: none;
+}
+#catlist a{
+    text-decoration: none;
+    color: black;
+}
+#catlist a:hover{
+    color: red;
+}
+.ss{
+    position: relative;
+    /* display: inline-block; */
+}
+.ssl{
+    display: none;
+    position: absolute;
+    left: 150px;
+    background-color: #c4c1c1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+    z-index: 1;
+}
+.ssl a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.ss:hover .ssl{
+    display: block;
+}
+.ssl a:hover{
+    background-color: rgb(158, 158, 158);
+}
+.brnd{
+    position: relative;
+    /* display: inline-block; */
+}
+.brndl{
+    display: none;
+    position: absolute;
+    left: 150px;
+    background-color: #c4c1c1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+    z-index: 1;
+}
+.brndl a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.brnd:hover .brndl{
+    display: block;
+}
+.brndl a:hover{
+    background-color: rgb(158, 158, 158);
+}
+.mnf{
+    position: relative;
+    /* display: inline-block; */
+}
+.mnfl{
+    display: none;
+    position: absolute;
+    left: 150px;
+    background-color: #c4c1c1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+    z-index: 1;
+}
+.mnfl a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.mnf:hover .mnfl{
+    display: block;
+}
+.mnfl a:hover{
+    background-color: rgb(158, 158, 158);
+}
+.main{
+    width: 1160px;
+    height: 2700px;
+}
+.picslid{
+    /* max-width: 100px; */
+    position: relative;
+    height: 660px;
+}
+.pic{
+    display: none;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: red;
+    font-weight: bold;
+    font-size: 34px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0, 0.8);
+}
+.cap{
+    color: tomato;
+    font-size: 30px;
+    /* text-shadow: 0px 0px 5px rgb(0, 0, 0) */
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+.numtxt{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+.intro>h1{
+    font-style: italic;
+}
+.boxcnt{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    border:2px solid tomato;
+    margin: 75px 45px;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+}
+.box:hover{
+    box-shadow: 0px 0px 10px orange;
+    opacity: 1;
+    cursor: pointer;
+}
+#carpb{
+    background: url(https://images.unsplash.com/photo-1569747791777-bfdcdaa12ca8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) center;
+    text-shadow: 0px 0px 10px black;
+}
+#bikpb{
+    background: url(https://images.unsplash.com/photo-1624400567110-5f023807720a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center;
+    text-shadow: 0px 0px 10px black;
+}
+#mspb{
+    background: url(https://images.unsplash.com/photo-1609013304225-26a1b84ac180?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80) bottom;
+    text-shadow: 0px 0px 10px black;
+}
+#opb{
+    background: url(https://c0.wallpaperflare.com/preview/876/440/916/aircraft-airplane-close-up-clouds.jpg) center;
+    background-size: cover;
+    text-shadow: 0px 0px 10px black;
+}
+.newars{
+    display: flex;
+}
+.nabox{
+    display: flex;
+    border:1px solid black;
+    margin: 75px 45px;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.nabox:hover{
+    cursor: pointer;
+}
+.nacap{
+    display: flex;
+}
+#p1{
+    background: url(https://m.media-amazon.com/images/I/51Y5AKaGcPL._AC_.jpg) bottom;
+    background-size: cover;
+}
+#p2{
+    background: url(https://cf.shopee.com.my/file/332d032f785cfdc6613808d9a8168dff_tn) center;
+    background-size: cover;
+}
+#p3{
+    background: url(https://autoartmodels.com/shop/images/project/79179a.jpg);
+    background-size: cover;
+}
+#p4{
+    background: url(https://motorsportsminiatures.com/images/detailed/22/S7672-1.jpeg) center;
+    background-size: cover;
+}
+.boxcap{
+    display: flex;
+    /* border:1px solid black; */
+    margin: 0px 45px;
+    position: relative;
+    bottom: 266px;
+    padding: 21px;
+    height: 250px;
+    width: 150px;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 15px;
+    color: black;
+}
+.boxcap:hover{
+    cursor: pointer;
+    color: tomato;
+    box-shadow: 0px 0px 10px rgb(99, 98, 98);
+}
+#pm1{
+    background: url(https://cdn.shopify.com/s/files/1/0095/8211/6964/products/Suzuki-GSX-S-750-1-18-Maisto-diecast-scale-model-collective-1_600x.jpg?v=1613376053) bottom;
+    background-size: cover;
+}
+#pm2{
+    background: url(https://cdn.shopify.com/s/files/1/0095/8211/6964/products/McLaren-Senna-1-24-motormax-diecast-scale-model-car-1_600x.jpg?v=1610459229) center left;
+    background-size: cover;
+}
+#pm3{
+    background: url(https://cdn.shopify.com/s/files/1/0095/8211/6964/products/Porsche-911-GT2-RS-white-1-36-Kinsmart-diecast-scale-model-car-1_600x.jpg?v=1604731257);
+    background-size: cover;
+}
+#pm4{
+    background: url(https://cdn.shopify.com/s/files/1/0095/8211/6964/products/Ferrari-LaFerrari-Aperta-70th-Anniversary-1-24-bburago-diecast-scale-model-car-collectible-replica-1_600x.jpg?v=1585041283) center left;
+    background-size: cover;
+}
+.popular{
+    position: relative;
+    bottom: 200px;
+}
+.reviews{
+    display: flex;
+    justify-content: center;
+}
+.cusrev{
+    position: relative;
+    bottom: 385px;
+}
+.revbox{
+    border: 1px solid black;
+    padding: 20px;
+    padding-bottom: 35px;
+    margin: 20px 40px;
+    height: 230px;
+    width: 200px;
+    background-color: tomato;
+    font-style: italic;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+.ftbox{
+    background-color: rgb(219, 218, 218);
+    display: flex;
+    justify-content: center;
+}
+.clm{
+    /* border: 1px solid white; */
+    margin: 20px 120px;
+    height: 200px;
+    width: 250px;
+    padding: 20px 0px;
+    text-align: left;
+    font-size: 12px;
+}
+.clm li{
+    list-style: none;
+}
+.clm a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.newlet{
+    margin: 15px 0px;
+}
+.clm ul{
+    position: relative;
+    right: 40px;
+}
+.social{
+    display: flex;
+}
+.spic{
+    margin: 0 10px;
+    border: 1px solid white;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+.spic:hover{
+    cursor: pointer;
+}
+#fb{
+    background: url(https://www.facebook.com/images/fb_icon_325x325.png);
+    background-size: cover;
+}
+#ig{
+    background: url(https://images-eu.ssl-images-amazon.com/images/I/41WWWP87X6L.jpg);
+    background-size: cover;
+}
+#yt{
+    background: url(https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc);
+    background-size: cover;
+}
+#twt{
+    background: url(https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-superJumbo-v4.jpg) center;
+    background-size: cover;
+}
+#credit{
+    background-color: rgb(219, 218, 218);
+    padding-bottom: 5px;
+    font-size: 8px;
+}
